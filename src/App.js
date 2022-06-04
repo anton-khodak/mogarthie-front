@@ -1,15 +1,16 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
+import Home from "./pages/Home";
+import Comments from "./pages/Comments";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Welcome to Anton Khodak's website
-        </p>
-      </header>
-    </div>
+      <BrowserRouter>
+          <Routes>
+              <Route index element={<Home />}/>
+              <Route path="comments" element={<Comments />}/>
+          </Routes>
+      </BrowserRouter>
   );
 }
 
